@@ -12,12 +12,12 @@ app.use(cors());
 
 // MongoDB connection
 mongoose.connect(
-  "mongodb+srv://praneethpaloju:Keerthika%409951@cluster0.mvvpdch.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0/e-commerce"
+  "mongodb_connection_string/e-commerce"
 );
 
 // API creation
 app.get("/", (req, res) => {
-  res.send("Started");
+  res.send("Server started");
 });
 
 // Image storage engine
