@@ -206,7 +206,7 @@ app.get("/newcollections", async (req, res) => {
 
 // Endpoint for popular women section
 app.get("/popularinwomen", async (req, res) => {
-  let products = await Product.find({ category: "women" });
+  let products = await Product.find({ category: "Women" });
   let popular_in_women = products.slice(0, 4);
   console.log("Popular in women fetched");
   res.send(popular_in_women);
@@ -267,6 +267,7 @@ app.post("/getcart", fetchUser, async (req, res) => {
   console.log("Get Cart");
   let userData = await Users.findOne({ _id: req.user.id });
   res.json(userData.cartData);
+  // res.json({ errors: "No products available" });
 });
 
 app.listen(PORT, (err) => {

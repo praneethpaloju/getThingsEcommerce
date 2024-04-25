@@ -7,7 +7,7 @@ const Addproducts = () => {
   const [productDetails, setProdDetails] = useState({
     name: "",
     image: "",
-    category: "men",
+    category: "Men",
     new_price: "",
     old_price: "",
   });
@@ -101,7 +101,7 @@ const Addproducts = () => {
         >
           <option value="Women">Women</option>
           <option value="Men">Men</option>
-          <option value="Kid">Kid</option>
+          <option value="Kids">Kids</option>
         </select>
       </div>
       <div className="addproduct-itemfield">
